@@ -1,0 +1,318 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* 전체 스타일 초기화 */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+/* 전체 스타일 초기화  끝 */
+
+/* top 시작 */
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+header .top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1900px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 10;
+}
+
+header .top h1 {
+    position: relative;
+    top: 30px;
+}
+
+header .top .util {
+    display: flex;
+    gap: 10px;
+}
+
+header .top .util li {
+    float: none;
+}
+
+header .top .util li a {
+    display: block;
+    padding: 0 10px;
+    font: 14px/1 "arial";
+    color: #fff;
+    transition: all 0.5s;
+}
+
+header .top .util li a:hover {
+    color: #000;
+}
+
+/*top 끝*/
+
+/*figure 시작*/
+figure {
+    width: 100%;
+    height: 100vh;
+    background: url(../source/main.jpg);
+    background-repeat: no-repeat;
+}
+
+figure .inner {
+    width: 1900px;
+    height: 100vh;
+    padding-left: 20px;
+    padding-top: 500px;
+    position: absolute;
+}
+
+figure .inner h1 {
+    font: bold 120px/1 "arial";
+    color: #eee;
+    margin-bottom: 30px;
+}
+
+figure .inner p {
+    font: 16px/1.5 "arial";
+    color: #eee;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+figure .inner a {
+    display: block;
+    width: 400px;
+    height: 30px;
+    border: 1px solid #eee;
+    font: bold 12px/30px "arial";
+    color: #eee;
+    text-align: center;
+    letter-spacing: 1.2px;
+    transition: all 0.5s;
+}
+
+figure .inner a:hover {
+    background-color: #fff;
+    color: #555;
+}
+/* figure 끝 */
+
+/*nav 시작*/
+.sticky-nav {
+    width: 100%;
+    min-width: 1180px;
+    margin: 0 auto;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 999;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+}
+
+.sticky-nav ul {
+    display: flex;
+    gap: 40px; /* 아이템 간 간격 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sticky-nav a {
+    display: block;
+    font: bold 15px/1 "Noto Sans KR";
+    color: #555;
+    padding: 25px 20px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.sticky-nav a:hover {
+    color: #fff;
+    background-color: #000;
+}
+/* nav 끝 */
+
+/* section article 시작 */
+section {
+    width: 100%;
+    padding: 100px 0px;
+}
+
+section .inner {
+    width: 1180px;
+    margin: 0 auto;
+}
+
+section .inner .wrap {
+    width: 100%;
+}
+
+section .inner .wrap article {
+    width: 280px;
+    float: left;
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+/*자식요소인 article의 float해제*/
+section .inner .wrap::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*제일 오른쪽 마지막 요소의 여백 제거*/
+section .inner .wrap article:last-child {
+    margin-right: 0px;
+}
+
+section .inner .wrap article h2 {
+    height: 30px;
+    font: bold 16px/1 "arial";
+    color: #333;
+    margin-bottom: 20px;
+}
+
+section .inner .wrap article p {
+    display: block;
+    font: 14px/1.2 "arial";
+    color: #333;
+}
+
+section .inner .wrap article .a {
+    font: 12px/1.2 "arial";
+    text-decoration: line-through;
+    color: #333;
+}
+
+section .inner .wrap article .b {
+    font: bold 16px/1.2 "arial";
+}
+
+section .inner .wrap article .c {
+    font: 12px/2 "arial";
+    color: orange;
+}
+
+section .inner .wrap article .d {
+    font: 400 14px/1 "arial";
+    float: left;
+    margin: 0px 3px;
+    padding: 4px 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+section .inner .wrap article .e {
+    font: 400 14px/1 "arial";
+    float: left;
+    margin: 0px 3px;
+    padding: 4px 10px;
+    background-color: rgb(0, 183, 255);
+    color: #fff;
+}
+
+section .inner .wrap article .pic {
+    width: 100%;
+    height: 400px;
+    background-color: #333;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+section .inner .wrap article .pic img {
+    object-fit: cover;
+    /*pic 프레임 안에 이미지를 꽉 채운다*/
+    width: 100%;
+    height: 100%;
+}
+/*section 끝*/
+
+/* footer 시작 */
+footer .inner .upper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(129, 103, 86);
+    padding: 100px 0px;
+}
+
+footer .inner {
+    width: 100%;
+    margin: 0px auto;
+}
+
+footer .inner .upper {
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 20px;
+}
+
+footer .inner .upper h1 {
+    font: bold 24px/1 "arial";
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+footer .inner .upper ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer .inner .upper ul li {
+    float: left;
+    margin: 0px 10px;
+}
+
+footer .inner .upper ul li a {
+    font: 400 14px/1 "arial";
+    color: #fff;
+}
+
+footer .inner .lower {
+    width: 100%;
+    padding-top: 20px;
+}
+
+footer .inner .lower address {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font: 12px/1.5 "arial";
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+footer .inner .lower p {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font: 12px/1.5 "arial";
+    color: #fff;
+}
